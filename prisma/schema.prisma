@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Sem5 {
+  id                                   String @id @default(cuid())
+  RollNo                               Int
+  EnrollmentNo                         String @unique
+  StudentName                          String
+  LabBatchNo                           String
+  sem                                  String
+  AdmissionApplicationNo               String @unique @default("")
+  Altmail                              String @default("")
+  FNum                                 String @default("")
+  Gender                               String @default("")
+  MNum                                 String @default("")
+  PhNum1                               String @default("")
+  PhNum2                               String @default("")
+  mail                                 String @default("")
+  aadhaar_number                       String @default("")
+  abc_id                               String @default("")
+  dob                                  String @default("")
+  mobile_number_registered_with_aadhar String @default("")
+}
+
+model Sem4 {
+  id Int @id @default(autoincrement())
+  RollNo Int
+  EnrollmentNo String
+  StudentName String
+  LabBatchNo String
+}
+
+model batch_2024_25 {
+    id Int @id @default(autoincrement())
+    name String
+    address String
+    city String
+    pincode String
+    student_mobile String
+    parent_mobile String
+    email String
+    birthdate String
+    gender String
+    aadhar_no String
+    religion String
+    cast String
+    stream String
+    tenth_percent String
+    twelfth_percent String
+    admission_no Int
+}
+
+model batch_2023_24 {
+  id Int @id @default(autoincrement())
+  StudentId String
+  StudentName String
+  RollNoSem1 String
+  AdmissionApplicationNo String
+  Altmail String
+  FNum String
+  Gender String
+  MNum String
+  PhNum1 String
+  PhNum2 String
+  RollNoSem5 Int
+  aadhaar_number String
+  abc_id String
+  dob String
+  mail String
+  mobile_number_registered_with_aadhar String
+  RollNoSem4 Int
+  RollNoSem2 String
+  RollNoSem3 Int
+}
+
+model Tjpatel_batch_2023_24 {
+  id Int @id @default(autoincrement())
+  SrNo Int
+  ApplicantName String
+  ApplicationNo String
+  Gender String
+  Category String
+  Disability String
+  Minority String
+  Nationality String
+  PaymentByCollege String
+  PaymentByStudent String
+  EnrolmentNumber String
+  ProgramType String
+  Verification String
+  spid String
+}
+
+model charusat {
+  id Int @id @default(autoincrement())
+  roll_no Int
+  id_no String
+  name String
+  first_sem_sgpa Float
+  first_sem_backlogs Int
+  second_sem_sgpa Float
+  second_sem_backlogs Int
+  first_sem_cgpa Float
+}
