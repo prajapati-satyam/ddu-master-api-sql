@@ -10,7 +10,7 @@ router.post('/admin/find/sem5/:rollNumber', admin_middleware,sem5_admin);
 router.post('/admin/find/central', admin_middleware,central);
 router.post('/admin/find/batch-2024-25', admin_middleware,batch_2024_25);
 router.post('/find/tjpatel', tj_patel);
-router.post('/find/charusat/:roll_no', charusat);
+router.get('/find/charusat/:roll_no', charusat);
 
 
 module.exports = router
