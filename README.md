@@ -35,7 +35,7 @@ https://ddu-master-api-sql.onrender.com/api/v1/find/tjpatel
 ```
 body (payload)
 ```
-"spid": "last three digits of spid"
+"spid": <last three digit of spid>
 ```
 
 ### CHARUSAT (batch 2023-24, AI ML Batch)
