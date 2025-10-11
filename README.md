@@ -91,5 +91,5 @@ https://ddu-master-api-sql.onrender.com/api/v1/admin/find/batch-2024-25
 body (payload)
 ```
 "admin_key": "ENTER YOUR ADMIN KEY",
-"admission_no": 5
+"admissionNo": 5
 ```
